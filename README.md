@@ -30,16 +30,22 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 ## Skill inicial
 
 - `skills/lovable-supabase-governance-audit/SKILL.md`
+
+## System design pack
+
 - `skills/system-design/system-design-alignment/SKILL.md`
 - `skills/system-design/lovable-platform-architecture-review/SKILL.md`
 - `skills/system-design/data-governance-and-rls-design/SKILL.md`
 - `skills/system-design/observability-and-operability-design/SKILL.md`
 - `skills/system-design/security-by-design-for-lovable/SKILL.md`
+- `skills/system-design/api-contract-design/SKILL.md`
+- `skills/system-design/async-jobs-and-queues/SKILL.md`
+- `skills/system-design/multi-tenant-architecture/SKILL.md`
+- `skills/system-design/deployment-and-rollback-design/SKILL.md`
 
 ## Próximos passos sugeridos
 
-- adicionar skills de CSP/XSS;
-- adicionar skills de revisão de edge functions;
-- adicionar skills de API design;
-- adicionar skills de eventos, filas e jobs assíncronos;
-- adicionar skills de revisão de logs/DevTools.
+- adicionar skills de event-driven design;
+- adicionar skills de compliance/auditoria;
+- adicionar skills de mobile/backend API;
+- adicionar skills de feature flags e release governance.

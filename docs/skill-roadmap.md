@@ -10,6 +10,7 @@
 ## Phase 2 — platform hardening
 - API contract design
 - background jobs and queue design
+- event-driven design
 - multi-tenant architecture
 - audit and compliance design
 - deployment and rollback strategy
