@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+protected_refs=("refs/heads/main" "refs/heads/master")
+allow_main_push="${ALLOW_MAIN_PUSH:-0}"
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  for protected in "${protected_refs[@]}"; do
+    if [[ "$local_ref" == "$protected" || "$remote_ref" == "$protected" ]]; then
+      if [[ "$allow_main_push" != "1" ]]; then
+        cat >&2 <<'EOF'
+BLOCKED: direct push to the protected branch is disabled locally.
+
+This repo keeps main/master behind a local guardrail to mimic branch protection.
+To proceed intentionally, run:
+
+  ALLOW_MAIN_PUSH=1 git push
+
+If you are pushing a feature branch, choose a non-protected ref.
+EOF
+        exit 1
+      fi
+    fi
+  done
+done
+
+exit 0

@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+staged_files=$(git diff --cached --name-only --diff-filter=ACM)
+
+# Block obvious secret material from being committed.
+secret_patterns=(
+  'GITHUB_TOKEN='
+  'ghp_[A-Za-z0-9_\-]+'
+  'github_pat_[A-Za-z0-9_\-]+'
+  'sk-[A-Za-z0-9_\-]+'
+  'service_role'
+  'BEGIN RSA PRIVATE KEY'
+  'BEGIN OPENSSH PRIVATE KEY'
+)
+
+for file in $staged_files; do
+  # Do not self-scan the hook and guardrail files themselves; they may
+  # intentionally contain the words we are trying to block elsewhere.
+  case "$file" in
+    .githooks/*|scripts/install-git-guardrails.sh|docs/git-guardrails.md)
+      continue
+      ;;
+  esac
+
+  if [[ -f "$file" ]]; then
+    for pat in "${secret_patterns[@]}"; do
+      if grep -IEn -m 1 -E "$pat" "$file" >/dev/null 2>&1; then
+        echo "BLOCKED: possible secret pattern detected in $file ($pat)" >&2
+        exit 1
+      fi
+    done
+  fi
+done
+
+# Enforce basic SKILL.md metadata on any staged skill files.
+for file in $staged_files; do
+  if [[ "$file" == *"/SKILL.md" && -f "$file" ]]; then
+    if ! head -n 20 "$file" | grep -qE '^name:'; then
+      echo "BLOCKED: missing 'name:' frontmatter in $file" >&2
+      exit 1
+    fi
+    if ! head -n 20 "$file" | grep -qE '^description:'; then
+      echo "BLOCKED: missing 'description:' frontmatter in $file" >&2
+      exit 1
+    fi
+  fi
+done
+
+exit 0

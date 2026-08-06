@@ -13,8 +13,9 @@ This repository is the canonical source for the Lovable skills library.
 
 1. create the GitHub repository;
 2. add the remote;
-3. push `main`;
-4. protect the default branch if this repo will be edited by multiple people.
+3. install local guardrails with `bash scripts/install-git-guardrails.sh`;
+4. push `main`;
+5. protect the default branch if this repo will be edited by multiple people.
 
 Example:
 

@@ -25,7 +25,21 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 1. cada skill deve ter um `SKILL.md` com frontmatter válido;
 2. quando a skill mudar, atualizar primeiro aqui;
 3. depois exportar ou sincronizar para o Lovable;
-4. manter as skills em português quando o uso principal for pt-BR.
+4. manter as skills em português quando o uso principal for pt-BR;
+5. instalar e respeitar os guardrails locais antes de puxar ou empurrar mudanças.
+
+## Guardrails locais
+
+Este repositório usa hooks em `.githooks/` para simular uma proteção de branch enquanto o GitHub privado não permite branch protection nativa.
+
+- `pre-commit`: bloqueia segredos óbvios e SKILL.md sem frontmatter mínimo;
+- `pre-push`: bloqueia push direto para `main`/`master` sem `ALLOW_MAIN_PUSH=1`.
+
+Instalação:
+
+```bash
+bash scripts/install-git-guardrails.sh
+```
 
 ## Skill inicial
 
