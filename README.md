@@ -41,6 +41,12 @@ Instalação:
 bash scripts/install-git-guardrails.sh
 ```
 
+## Fluxo de contribuição
+
+- `CONTRIBUTING.md` — branch, revisão e checklist de publicação;
+- `docs/branching-and-review.md` — processo resumido para PRs e merge;
+- `.github/PULL_REQUEST_TEMPLATE.md` — checklist que acompanha cada PR.
+
 ## Skill inicial
 
 - `skills/lovable-supabase-governance-audit/SKILL.md`

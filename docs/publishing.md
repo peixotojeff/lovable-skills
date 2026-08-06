@@ -50,5 +50,6 @@ Recommended flow:
 2. system design foundations;
 3. platform hardening skills;
 4. packaging/manifest update;
-5. GitHub push;
-6. Lovable sync/import.
+5. feature branch review and merge;
+6. GitHub push;
+7. Lovable sync/import.
