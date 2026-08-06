@@ -24,29 +24,29 @@ git remote add origin git@github.com:YOUR_ORG/lovable-skills.git
 git push -u origin main
 ```
 
-## Prepare for Lovable
+## Preparar para o Lovable
 
-Lovable imports one skill package at a time.
-The package must contain `SKILL.md` at the root, or inside one wrapping folder.
+Este repositório já está pronto para o Lovable na raiz.
+A raiz contém `SKILL.md`, então você pode importar o repositório como está.
 
-Recommended flow:
+Fluxo recomendado:
 
-1. keep the canonical source here;
-2. update the skill in this repository first;
-3. export one skill at a time with `scripts/package_lovable_skill.py`;
-4. keep `skills/index.md` and `skills-manifest.json` aligned;
-5. import the generated ZIP from `dist/lovable-imports/<skill-name>.zip`.
+1. mantenha a fonte canônica aqui;
+2. atualize primeiro o repositório;
+3. importe a raiz do repositório diretamente no Lovable;
+4. mantenha `skills/index.md` e `skills-manifest.json` alinhados;
+5. use o script opcional somente se quiser gerar um ZIP de uma skill individual.
 
-Example:
+Destino direto de importação:
+
+- raiz do repositório
+- ou um ZIP gerado a partir da raiz do repositório, preservando `SKILL.md` na raiz do arquivo
+
+Exportação opcional de skill individual:
 
 ```bash
 python3 scripts/package_lovable_skill.py lovable-supabase-governance-audit
 ```
-
-This produces:
-
-- `dist/lovable-imports/lovable-supabase-governance-audit/`
-- `dist/lovable-imports/lovable-supabase-governance-audit.zip`
 
 ## Versioning policy
 

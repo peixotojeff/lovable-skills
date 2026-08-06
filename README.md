@@ -11,9 +11,17 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 
 ## Estrutura
 
-- `skills/` — skills organizadas por tema;
-- `skills/index.md` — catálogo rápido;
-- `docs/` — convenções e notas operacionais, quando necessário.
+- `SKILL.md` — ponto de entrada de importação do Lovable na raiz do repositório;
+- `skills/` — skills de apoio organizadas por tema;
+- `skills/index.md` — catálogo para humanos;
+- `docs/` — convenções e notas de publicação.
+
+## Modelo de importação
+
+Este repositório foi desenhado para ser importado diretamente no Lovable a partir da raiz.
+Nenhum script de adaptação é necessário no fluxo normal.
+
+Se algum dia você quiser exportar uma skill individual, o script de apoio existe apenas como utilitário opcional, não como etapa obrigatória.
 
 ## Categorias atuais
 
@@ -46,7 +54,7 @@ bash scripts/install-git-guardrails.sh
 - `CONTRIBUTING.md` — branch, revisão e checklist de publicação;
 - `docs/branching-and-review.md` — processo resumido para PRs e merge;
 - `.github/PULL_REQUEST_TEMPLATE.md` — checklist que acompanha cada PR;
-- `scripts/package_lovable_skill.py` — exporta uma skill em formato que o Lovable aceita.
+- `scripts/package_lovable_skill.py` — utilitário opcional para exportar uma skill individual.
 
 ## Skill inicial
 
