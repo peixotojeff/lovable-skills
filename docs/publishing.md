@@ -26,15 +26,27 @@ git push -u origin main
 
 ## Prepare for Lovable
 
-Lovable should receive the curated skill files only.
+Lovable imports one skill package at a time.
+The package must contain `SKILL.md` at the root, or inside one wrapping folder.
 
 Recommended flow:
 
 1. keep the canonical source here;
-2. update skills in this repository first;
-3. generate or copy the wanted skill files into Lovable;
+2. update the skill in this repository first;
+3. export one skill at a time with `scripts/package_lovable_skill.py`;
 4. keep `skills/index.md` and `skills-manifest.json` aligned;
-5. if Lovable supports import from repo/zip, use the repo root or the `skills/` folder as the source of truth.
+5. import the generated ZIP from `dist/lovable-imports/<skill-name>.zip`.
+
+Example:
+
+```bash
+python3 scripts/package_lovable_skill.py lovable-supabase-governance-audit
+```
+
+This produces:
+
+- `dist/lovable-imports/lovable-supabase-governance-audit/`
+- `dist/lovable-imports/lovable-supabase-governance-audit.zip`
 
 ## Versioning policy
 
