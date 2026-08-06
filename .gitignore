@@ -1,0 +1,5 @@
+# Ignore local attachment artifacts and editor noise
+.hermes/
+*.swp
+*.tmp
+.DS_Store
