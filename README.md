@@ -4,7 +4,7 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 
 ## Objetivo
 
-- guardar skills úteis para desenvolvimento e auditoria;
+- guardar skills úteis para desenvolvimento, system design e auditoria;
 - manter uma fonte única de verdade;
 - facilitar revisão, versionamento e distribuição;
 - permitir evolução contínua sem espalhar arquivos soltos.
@@ -14,6 +14,11 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 - `skills/` — skills organizadas por tema;
 - `skills/index.md` — catálogo rápido;
 - `docs/` — convenções e notas operacionais, quando necessário.
+
+## Categorias atuais
+
+- `audit/` — governança, segurança, DevTools, Supabase.
+- `system-design/` — arquitetura, contratos, dados, observabilidade, segurança.
 
 ## Padrão de manutenção
 
@@ -25,10 +30,16 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 ## Skill inicial
 
 - `skills/lovable-supabase-governance-audit/SKILL.md`
+- `skills/system-design/system-design-alignment/SKILL.md`
+- `skills/system-design/lovable-platform-architecture-review/SKILL.md`
+- `skills/system-design/data-governance-and-rls-design/SKILL.md`
+- `skills/system-design/observability-and-operability-design/SKILL.md`
+- `skills/system-design/security-by-design-for-lovable/SKILL.md`
 
 ## Próximos passos sugeridos
 
 - adicionar skills de CSP/XSS;
 - adicionar skills de revisão de edge functions;
-- adicionar skills de RLS e políticas Supabase;
+- adicionar skills de API design;
+- adicionar skills de eventos, filas e jobs assíncronos;
 - adicionar skills de revisão de logs/DevTools.
