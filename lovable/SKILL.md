@@ -17,25 +17,20 @@ A raiz contém `SKILL.md`, então o repositório pode ser importado como está, 
 
 ## O que este pacote contém
 
-- um catálogo central de skills;
-- skills de system design;
-- skills de governança e segurança;
-- documentação de publicação e manutenção;
-- notas auxiliares para humanos.
+- o `SKILL.md` de entrada;
+- skills reutilizáveis organizadas em `skills/`.
 
 ## Como usar
 
-- importe a raiz do repositório no Lovable;
+- importe o diretório `lovable/` no Lovable;
 - mantenha o `SKILL.md` da raiz como ponto de entrada principal;
 - mantenha as skills de apoio organizadas em `skills/`;
-- atualize os arquivos de catálogo quando as skills mudarem.
+- adicione ou remova skills apenas quando forem realmente úteis.
 
 ## Arquivos canônicos
 
 - `SKILL.md` — ponto de entrada de importação do Lovable;
-- `skills/index.md` — catálogo das skills disponíveis;
-- `skills-manifest.json` — inventário máquina-legível;
-- `docs/` — notas de fluxo e publicação.
+- `skills/` — skills importáveis do pacote leve.
 
 ## Regras de manutenção
 

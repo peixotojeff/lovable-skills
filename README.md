@@ -19,7 +19,7 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 ## Modelo de importação
 
 O pacote recomendado para Lovable é `lovable/`.
-Ele contém apenas o que o Lovable precisa para importar com leveza, sem docs operacionais, scripts ou guardrails do Git.
+Ele contém apenas o essencial para importação: `SKILL.md` na raiz e as skills realmente úteis em `skills/`.
 
 Se você quiser manter a central completa no GitHub, use o repositório raiz como fonte de verdade e o subdiretório `lovable/` como alvo de importação.
 

@@ -27,14 +27,14 @@ git push -u origin main
 ## Preparar para o Lovable
 
 O alvo leve recomendado para importação é `lovable/`.
-Esse subdiretório contém o pacote enxuto, com `SKILL.md` na raiz e somente os arquivos que o Lovable precisa para importar a central.
+Esse subdiretório contém apenas o essencial: `SKILL.md` na raiz e as skills que realmente valem ficar no pacote importável.
 
 Fluxo recomendado:
 
 1. mantenha a fonte canônica no repositório raiz;
 2. atualize os arquivos canônicos primeiro;
 3. importe `lovable/` no Lovable;
-4. mantenha `skills/index.md` e `skills-manifest.json` alinhados no pacote leve;
+4. use `skills/index.md` e `skills-manifest.json` só no repositório raiz, como apoio humano e de manutenção;
 5. use o script opcional somente se quiser gerar um ZIP de uma skill individual.
 
 Destino direto de importação:
