@@ -11,17 +11,17 @@ Central local para manter skills reutilizáveis do Lovable organizadas, versiona
 
 ## Estrutura
 
-- `SKILL.md` — ponto de entrada de importação do Lovable na raiz do repositório;
-- `skills/` — skills de apoio organizadas por tema;
+- `lovable/` — pacote leve e importável no Lovable;
+- `skills/` — fonte canônica completa no repositório;
 - `skills/index.md` — catálogo para humanos;
 - `docs/` — convenções e notas de publicação.
 
 ## Modelo de importação
 
-Este repositório foi desenhado para ser importado diretamente no Lovable a partir da raiz.
-Nenhum script de adaptação é necessário no fluxo normal.
+O pacote recomendado para Lovable é `lovable/`.
+Ele contém apenas o que o Lovable precisa para importar com leveza, sem docs operacionais, scripts ou guardrails do Git.
 
-Se algum dia você quiser exportar uma skill individual, o script de apoio existe apenas como utilitário opcional, não como etapa obrigatória.
+Se você quiser manter a central completa no GitHub, use o repositório raiz como fonte de verdade e o subdiretório `lovable/` como alvo de importação.
 
 ## Categorias atuais
 

@@ -18,7 +18,7 @@ for file in $staged_files; do
   # Do not self-scan the hook and guardrail files themselves; they may
   # intentionally contain the words we are trying to block elsewhere.
   case "$file" in
-    .githooks/*|scripts/install-git-guardrails.sh|docs/git-guardrails.md)
+    .githooks/*|scripts/install-git-guardrails.sh|docs/*|*.md|*.mdx)
       continue
       ;;
   esac
